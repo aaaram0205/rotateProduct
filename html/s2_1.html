@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/rotazione2d.js"></script>
+</head>
+<body>
+
+    <header class="header header--sub">
+        <div class="header__inner w1600">
+            <h1 class="header__logo">
+                <a href="#n">LOGO</a>
+            </h1>
+            <nav>
+                <ul id="clone_gnb" class="gnb af">
+                    <li class="">
+                        <a href="#n">회사소개</a>
+                    </li>
+                    <li class="current">
+                        <a href="#n">제품소개</a>
+                    </li>				
+                    <li class="">
+                        <a href="#n">연구</a>
+                    </li>			
+                    <li class="">
+                        <a href="#n">고객지원</a>
+                    </li>
+                    <li class="">
+                        <a href="#n">채용정보</a>
+                    </li>		
+                </ul>		
+            </nav>
+            <div class="header_buttons">	
+                <div class="button--language">
+                    <em>KOR</em>	
+                    <ul>
+                        <li><a href="#n">ENG</a></li> 
+                        <li><a href="#n">CHN</a></li> 
+                        <li><a href="#n">JAP</a></li>
+                    </ul>
+                </div>
+                <div class="button--sitemap">
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="wrap">
+        <section class="sub-wrap__top">
+            <h2 class="sub-wrap__title">제품소개</h2>
+            <!-- lnb 영역 -->
+            <div class="sub-wrap__lnb sub-wrap__lnb2">
+                <ul class="lnb__depth2 w1320">
+                    <li class="current"><a href="/s2/s2_1_1.php">Device1</a></li>
+                    <li class=""><a href="/s2/s2_2_1.php">Device2</a></li>		
+                    <li class=""><a href="/s2/s2_3_1.php">Device3</a></li>	
+                    <li class=""><a href="/s2/s2_4_1.php">Device4</a></li>	
+                    <li class=""><a href="/s2/s2_5_1.php">Device5</a></li>	
+                    <li class=""><a href="/s2/s2_6_1.php">Device6</a></li>	
+                    <li class=""><a href="/s2/s2_7_1.php">Device7</a></li>	
+                </ul>
+            </div> 
+        </section>
+        <section class="sub-container sub-container2 sub-container2_1">
+            <h3 class="sub-container__title">Device1</h3>
+            <div class="lnb__depth3 w1320">
+                <ul>
+                    <li class="current"><a href="s2_1.html">Line Up1</a></li>
+                    <li><a href="s2_2.html">Line Up2</a></li>
+                </ul>
+            </div>
+            <div class="sub-contents  sub-contents--product">
+                <div class="product-wrap clearfix">
+                    <section class="product__left">
+                        <ul class="product__thumb flex--ac">
+                            <li class="on">
+                                <a href="s2_1.html#contRotazione"><figure><img src="../images/product__thumb1.jpg" alt=""></figure></a>
+                            </li>     
+                            <li>
+                                <a href="s2_2.html#contRotazione"><figure><img src="../images/product__thumb2.jpg" alt=""></figure></a>
+                            </li>
+                        </ul>
+                        <div id="contRotazione">
+                            <video id="imgPrincipale" playsinline="" autoplay="" muted="" loop="">
+                                <source src="../video/test1.mp4" type="video/mp4">
+                            </video>	
+                            <div id="btnPlayPausaRotazione2d"></div>
+                            <div id="btnFullScreenRotazione2d"></div>
+                        </div>
+                        <ul class="product__left__btns2 flex--ac">
+                            <li class="btn--down btn--down--faq"><a href="#n" class="flex--ac">FAQ</a></li>
+                            <li class="btn--down btn--down--catalog"><a href="#n" onclick="alert('준비중입니다.')"  class="flex--ac">CATALOGUE</a></li>
+                        </ul>
+                </section>
+                <section class="product__right">
+                    <div class="inner">
+                        <div class="product-intro">
+                            <strong class="font--play">Device2</strong>
+                            <em class="font--play">Line Up2</em>
+                            <p>라인업에 대한 설명이 들어가는 영역입니다. 라인업에 대한 설명이 들어가는 영역입니다.라인업에 대한 설명이 들어가는 영역입니다.</p> 
+                        </div>
+                        <div class="product-cont" style="height: 900px">
+                            <div class="info-row info-row--border">
+                                <em class="info-title">App1</em>
+                                <div style="height: 300px;background-color: #ddd;"></div>
+                            </div>		
+                            <div class="info-row info-row--app">
+                                <em class="info-title">App2</em>
+                                <div style="height: 300px;background-color: #ddd;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+            </div> 
+        </section>
+        <footer>
+            footer 영역
+        </footer>
+    </div>
+
+</body>
+
+<script>
+
+    
+    // ID del contenitore di rotazione
+    const a1 = "contRotazione";
+    
+    // Path relativa che indica la posizione del video
+    const a2 = "/video/test1.mp4";
+    
+    // Cartella contenente le icone per il player 3D.
+    const a3 = "/assets/img";
+
+    rotation2d(a1, a2, a3);
+
+</script>
+</html>
